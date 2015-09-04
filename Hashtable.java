@@ -2,6 +2,9 @@
  * 
 Jonathan Aguirre 14349
 Samuel Diaz 14083
+Laboratorio No. 6
+03/09/2015
+Algoritmos y estructuras de Datos
  */
 /**
  * 
@@ -25,7 +28,7 @@ public class Hashtable {
        return c;
    }
    
-   public Set<String> retain(Set<String> c1,Set<String> c2,Set<String> c3){ // intersección de los 3 subconjuntos
+   public Set<String> retain(Set<String> c1,Set<String> c2,Set<String> c3){ // intersecciÃ³n de los 3 subconjuntos
        sc.clear();
        sc.addAll(c1);
        sc.retainAll(c2);
@@ -51,7 +54,7 @@ public class Hashtable {
        sc.addAll(c1);
        return sc;
    }
-   public boolean sub(Set<String> c1,Set<String> c2){ // condición de subconunto de otro conjunto
+   public boolean sub(Set<String> c1,Set<String> c2){ // condiciÃ³n de subconunto de otro conjunto
        sc.clear();
        sc.addAll(c1);
        sc.retainAll(c2);
@@ -62,7 +65,7 @@ public class Hashtable {
            return false;
        }
    }
-   public Set<String> cm(Set<String> c1,Set<String> c2,Set<String> c3){// devuleve el nombre conjunto con mayor tamaño
+   public Set<String> cm(Set<String> c1,Set<String> c2,Set<String> c3){// devuleve el nombre conjunto con mayor tamaÃ±o
        sc.clear();
        if (c1.size()>=c2.size()){
            sc.addAll(c1);
@@ -81,7 +84,7 @@ public class Hashtable {
        }
 
    }
-   public String gettercm() { // getter del conjunto más grande
+   public String gettercm() { // getter del conjunto mÃ¡s grande
         return cm;
     }
    public String getterc(Set<String> c1){  
