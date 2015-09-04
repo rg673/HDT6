@@ -22,6 +22,9 @@ public class Main {
       Hashtable c1 = new Hashtable(op); // Conjunto de java
       Hashtable c2 = new Hashtable(op); // conjunto de web
       Hashtable c3 = new Hashtable(op); // conjunto de moviles
+      Hashtable o1 = new Hashtable(2); // Conjunto ordenado de java
+      Hashtable o2 = new Hashtable(2); // conjunto ordenado de web
+      Hashtable o3 = new Hashtable(2); // conjunto ordenado de moviles
       String cont = "";  
       String name = ""; // nombre del programador
       while(est == true){ // ciclo
@@ -35,6 +38,7 @@ public class Main {
            cont = scan.next(); // lectura de ingreso
            if((cont.toLowerCase().equals("si")) || (cont.toLowerCase().equals("s"))){ // condición de ingreso correcto con si
               c1.setterop(name);
+              o1.setterop(name);
               est2 = false;
              } 
            else{
@@ -53,6 +57,7 @@ public class Main {
            cont = scan.next();    
            if((cont.toLowerCase().equals("si")) || (cont.toLowerCase().equals("s"))){// condición de ingreso correcto con si
               c2.setterop(name);
+              o2.setterop(name);
               est2 = false;    
              } 
            else{
@@ -71,6 +76,7 @@ public class Main {
            cont = scan.next();  
            if((cont.toLowerCase().equals("si")) || (cont.toLowerCase().equals("s"))){// condición de ingreso correcto con si   
               c3.setterop(name);
+              o3.setterop(name);
               est2 = false;    
              }    
            else{
@@ -105,6 +111,9 @@ public class Main {
               Set co1=c1.getterc();
               Set co2=c2.getterc();
               Set co3=c3.getterc();
+              Set oo1=o1.getterc();
+              Set oo2=o2.getterc();
+              Set oo3=o3.getterc();
               System.out.println("Lista de programadores de Java: "+ co1);
               System.out.println("Lista de programadores de Web: "+co2);
               System.out.println("Lista de programadores de Celulrares: "+co3);
@@ -124,8 +133,8 @@ public class Main {
                   System.out.println("5. Java no es subconjunto del conjunto de desarrolladores Web.");
               }
               System.out.println("__________________________________________________________________________________");
-              System.out.println("6. El conjunto de mayor tamaño es: "+ c1.gettercm()+ " "+c1.cm(co1, co2, co3) ); // se muestra  el conjunto mayor y sus integrantes
+              System.out.println("6. El conjunto de mayor tamaño es: "+ c1.cm(co1, co2, co3)+ "Con nombre "+c1.gettercm()); // se muestra  el conjunto mayor y sus integrantes
               System.out.println("__________________________________________________________________________________");
-              System.out.println("7. Lista de nombres de "+c1.gettercm()+" en orden es: "+c1.getterc(c2.cm(co1, co2, co3))); // se despliegan los nombre del conjunto con mayor cantidad de integrantes
+              System.out.println("7. Lista de nombres en orden son "+o1.cm(oo1, oo2, oo3)+" del grupo: "+c1.gettercm()); // se despliegan los nombre del conjunto con mayor cantidad de integrantes
     }
 }

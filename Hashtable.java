@@ -2,7 +2,6 @@
  * 
 Jonathan Aguirre 14349
 Samuel Diaz 14083
-
  */
 /**
  * 
@@ -10,22 +9,6 @@ Samuel Diaz 14083
  */
 import java.util.*;
 public class Hashtable {
-	public class Factory { // classe factory
-	    public Set<String> getterStack (int op){
-	        
-	        if (op==1){ // opcion 1 uso de Hashset
-	            return new HashSet<String>();
-	        }
-	        
-	        if (op==2){ // opcion 2 uso de Arboles
-	            return new TreeSet<String>();
-	        }
-	        if (op==3){ // opcion 3 uso de Hashset ensda
-	            return new LinkedHashSet<String>();
-	        }        
-	        return null;       // condición de error 
-	    }
-	}
    Factory operador = new Factory();  // operador de tipo factory
    private Set<String> c; // variable para almacenar un conjunto
    private Set<String> sc; // variable para almacenar un conjunto
@@ -103,11 +86,7 @@ public class Hashtable {
     }
    public String getterc(Set<String> c1){  
        String s= c1.toString();
-       s=s.replace("{", "");
-       s=s.replace("}", " ");
-       s=s.replace(";", "\n");
-       return s;
-       
+       return s;    
    }
    
 }
